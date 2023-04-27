@@ -103,7 +103,7 @@ function getResult(element){
         //adicina um marcador para a resposta correta.
         updateAnswerIndicator("correct");
         correctAnswers++;
-        console.log("correct:"+correctAnswers);
+        //console.log("correct:"+correctAnswers);
     }
     else{
         //pintar de vermelho caso o clique seja feito em uma alternativa errada.
@@ -144,7 +144,7 @@ function answersIndicator(){
     }
 }
 function updateAnswerIndicator(markType){
-    console.log(markType); //mostra no console a respostacerta ou errada.
+    //console.log(markType); //mostra no console a respostacerta ou errada.
     answersIndicatorContainer.children[questionCounter-1].classList.add(markType);
 
 }
@@ -152,7 +152,7 @@ function updateAnswerIndicator(markType){
 
 function next(){
     if(questionCounter === quiz.length){
-        console.log("terminou o quiz"); 
+       // console.log("terminou o quiz"); 
         quizOver();
     } 
     else{
@@ -196,6 +196,7 @@ function goToHome(){
     homeBox.classList.remove("hide");
     resetQuiz();
 }
+
 function startQuiz(){
   homeBox.classList.add("hide");  
   quizBox.classList.remove("hide");
@@ -205,4 +206,7 @@ function startQuiz(){
   getNewQuestion(); 
 
   answersIndicator();
+}
+window.onload = function (){
+    homeBox.querySelector(".total-questions").innerHTML = quiz.length;
 }

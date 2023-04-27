@@ -1,7 +1,7 @@
 body{
     margin:0;
     font-size: 16px;
-    background-color: #009688;
+    background-color: #0f0096ce;
 }
 *{
     box-sizing: border-box;
@@ -40,14 +40,14 @@ body{
     display: none;
 }
 .home-box h3{
-    font-size: 18px;
+    font-size: 16px;
     color: black;
     font-weight: 500;
     margin-bottom: 25px;
     line-height: 25px;
 }
 .home-box p{
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 10px;
     line-height: 22px;
     color: black;
@@ -56,13 +56,14 @@ body{
 }
 .home-box p span{
     font-weight: 500;
+    font-size: 15px;
 }
 .home-box .btn{
     margin-top: 20px;
 }
 .btn{
     padding:15px;
-    background-color: #009688;
+    background-color: #0f0096;
     
     color: #ffffff;
     border: none;
@@ -82,13 +83,13 @@ body{
 
 .quiz-box .question-number{
     font-size:18px;
-    color: #009688;
+    color: #0f0096;
     font-weight: 500;
     border-bottom:  3px solid #ccc;
     line-height: 25px;
 }
 .quiz-box .question-text{
-    font-size: 22px;
+    font-size: 13px;
     counter-reset: #000000;
     line-height: 28px;
     font-weight: 400;
@@ -139,7 +140,7 @@ body{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.637);
     z-index: -1;
     animation: slideInLeft .5s ease forwards;
 }
@@ -196,7 +197,7 @@ body{
      
 }
 .quiz-box .answers-indicator div.wrong{
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.719);
     background-image: url("/img/wrong.png");
     background-size: 50%;
      background-repeat: no-repeat;
@@ -213,6 +214,8 @@ body{
     font-size: 36px;
     line-height: 42px;
     color: #009688;
+    text-shadow: 2px 2px blue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .result-box table{
     width: 100%;
@@ -231,4 +234,34 @@ body{
 .result-box .btn{
     margin-right: 20px;
 
+}
+.hero-footer{
+    height: 80px;
+    background-color: #0f0096;
+    border-radius: 3px;
+}
+.hero-footer h1{
+    font-size: 15px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.658);
+    padding-top: 18px;
+    
+}
+.hero-footer a{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35%;
+    font-size: 20px;
+    color: rgba(250, 235, 215, 0.877);
+    text-decoration: none;
+    
+    
+}
+@media(max-width:767px){
+    .result-box .btn{
+        margin-bottom:15px;
+
+    }
+    body{
+        padding: 12px;
+    }
 }
