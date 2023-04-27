@@ -3,12 +3,21 @@
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
+const answersIndicatorContainer = document.querySelector(".answers-indicator");
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultBox = document.querySelector(".result-box");
+
 //abaixo é a variavel que vai receber a posição atual, questão atual.
 let questionCounter = 0;
 let currentQuestion;
 //Abaixo uma matriz de perguntas disponíves
 let availableQuestions = [];
 let availableOptions = [];
+let correctAnswers = 0;
+let attempt = 0;
+
+
 
 //enviar as perguntas para dentro da matriz availableQuestion
 function setAvailableQuestion(){
@@ -91,11 +100,19 @@ function getResult(element){
         //console.log("alternativa correta");
         //pintar de verde se estiver correto...Ver meu CSS para entender...os @keyframes 
         element.classList.add("correct");
+        //adicina um marcador para a resposta correta.
+        updateAnswerIndicator("correct");
+        correctAnswers++;
+        console.log("correct:"+correctAnswers);
     }
     else{
         //pintar de vermelho caso o clique seja feito em uma alternativa errada.
         //console.log("alternativa errada")
         element.classList.add("wrong");
+
+        //adicina um marcador para a resposta errada.
+        updateAnswerIndicator("wrong");
+
         //se a resposta estiver incorreta, mostre a opção correta adicionando a cor verde à opção correta
         const optionLen = optionContainer.children.length;
         for(let i=0;i<optionLen; i++){
@@ -104,6 +121,7 @@ function getResult(element){
             }
         }
     }
+    attempt++;
     unclickableOptions();
 }
 
@@ -115,19 +133,55 @@ function unclickableOptions(){
         optionContainer.children[i].classList.add("already-answerd");
     }
 }
+//resultados equando faz o simulado, cria as div
+function answersIndicator(){
+    answersIndicatorContainer.innerHTML = '';
+    const totalQuestion = quiz.length;
+    for(let i=0;i<totalQuestion;i++){
+        const indicator = document.createElement("div");
+        answersIndicatorContainer.appendChild(indicator);
+
+    }
+}
+function updateAnswerIndicator(markType){
+    console.log(markType); //mostra no console a respostacerta ou errada.
+    answersIndicatorContainer.children[questionCounter-1].classList.add(markType);
+
+}
+
 
 function next(){
     if(questionCounter === quiz.length){
         console.log("terminou o quiz"); 
+        quizOver();
     } 
     else{
         getNewQuestion();
     }
 }
+function quizOver(){
+    //Abrir resultado quiz
+    quizBox.classList.add("hide");
+   //mostrar a caixa de resultaredos
+   resultBox.classList.remove("hide");
+   quizResult();
 
+ }
+ //pegar o resultado do simulado:
+ function quizResult(){
+    resultBox.querySelector(".total-questions").innerHTML = quiz.length;
+    resultBox.querySelector(".total-attempt").innerHTML = attempt;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
+    resultBox.querySelector(".total-wrong").innerHTML = attempt - correctAnswers;
+    const percentage = (correctAnswers/quiz.length)*100;
+    resultBox.querySelector(".percentage").innerHTML = percentage.toFixed() + "%";
+    resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
+ }
 window.onload = function(){
     //primeiro vamos definir todas as questões na matriz availablreQuestions
   setAvailableQuestion(); 
   //Depois vamos chamar a finção abaixo..
   getNewQuestion(); 
+
+  answersIndicator();
 }
