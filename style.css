@@ -82,7 +82,7 @@ body{
     padding: 10px 0;
     margin: 0;
 }
-.quiz-box .option-container .container{
+.quiz-box .option-container div{
     background-color: #ccc;
     padding: 15px;
     font-size: 16px;
@@ -94,6 +94,8 @@ body{
     text-transform: capitalize;
 }
 .quiz-box .option-container{
+  
+
 
 }
 .quiz-box .btn{
