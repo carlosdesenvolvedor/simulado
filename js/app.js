@@ -177,7 +177,28 @@ function quizOver(){
     resultBox.querySelector(".percentage").innerHTML = percentage.toFixed() + "%";
     resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + quiz.length;
  }
-window.onload = function(){
+
+function resetQuiz(){
+    questionCounter = 0;   
+    correctAnswers = 0;
+    attempt = 0;
+
+}
+function tryAgainQuiz(){
+    resultBox.classList.add("hide");
+    quizBox.classList.remove("hide");
+    resetQuiz();
+    startQuiz();
+
+}
+function goToHome(){
+    resultBox.classList.add("hide");
+    homeBox.classList.remove("hide");
+    resetQuiz();
+}
+function startQuiz(){
+  homeBox.classList.add("hide");  
+  quizBox.classList.remove("hide");
     //primeiro vamos definir todas as questões na matriz availablreQuestions
   setAvailableQuestion(); 
   //Depois vamos chamar a finção abaixo..

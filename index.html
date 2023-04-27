@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="home-box custom-box hide ">
+    <div class="home-box custom-box ">
         <h3>Instruções</h3>
         <p>Total de questões: <span class="total-questions">10</span> </p>
-        <button type="button" class="btn">Começar simulado</button>
+        <button type="button" class="btn" onclick="startQuiz()">Começar simulado</button>
 
     </div>
 
-    <div class="quiz-box custom-box  ">
+    <div class="quiz-box custom-box hide ">
         <div class="question-number">
          
         </div>
@@ -63,8 +63,8 @@
                 <td><span class="total-score"></span></td>
             </tr>
         </table>
-        <button type="button" class="btn">Tentar de novo</button>
-        <button type="button" class="btn">Voltar para Home</button>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Tentar de novo</button>
+        <button type="button" class="btn" onclick="goToHome()">Voltar para Home</button>
     </div>
     <script src="js/question.js"></script>
     <script src="js/app.js"></script>
