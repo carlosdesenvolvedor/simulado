@@ -46,21 +46,61 @@ function getNewQuestion(){
     for(let i = 0;i<optionLen; i++){
         availableOptions.push(i);
     }
-    console.log(availableOptions)
+    //console.log(availableOptions)
+
+    optionContainer.innerHTML = '';
+    let animationDelay = 0.15;
+
 
     //setar opções com html
     for(let i=0; i<optionLen;i++){
+        // opções aleatórias
+        const optionIndex = availableOptions[Math.floor(Math.random() * availableOptions.length)];
+        ////Obter as perguntas aleatoriamente:
+        const index2 = availableOptions.indexOf(optionIndex);
+        //remove a opção que já apareceu
+        availableOptions.splice(index2,1);
+        //console.log(optionIndex);//ver as opções de forma aleatoria.
+        //console.log(availableOptions);
+        //console.log(optionIndex);
+
         const option = document.createElement("div");
-        option.innerHTML = currentQuestion.options[i];
-        option.id = i;
+        option.innerHTML = currentQuestion.options[optionIndex];
+        option.id = optionIndex;
+        //animação que dece uma div após a outra
+        option.style.animationDelay = animationDelay + 's';
+        animationDelay = animationDelay + 0.15;
+
         option.className = "option";
         optionContainer.appendChild(option);
+        option.setAttribute("onclick","getResult(this)");
     }
     
     questionCounter++
 
 
 }
+
+//Pegar o resultado ao clicar na opção 
+function getResult(element){
+    //console.log(element.innerHTML)
+    const id = parseInt(element.id) ; 
+    //console.log(typeof id);//teste para saber o tipo de retorno que era string vou transformar
+    //obter resposta ao clicar vai comparar o pelo da opção clicada
+    if(id === currentQuestion.answer){
+        //console.log("alternativa correta");
+        //pintar de verde se estiver correto...Ver meu CSS para entender...os @keyframes 
+        element.classList.add("correct");
+    }
+    else{
+        //pintar de vermelho caso o clique seja feito em uma alternativa errada.
+        //console.log("alternativa errada")
+        element.classList.add("wrong");
+    }
+}
+
+
+
 function next(){
     if(questionCounter === quiz.length){
         console.log("terminou o quiz"); 
