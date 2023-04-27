@@ -86,7 +86,7 @@ function getResult(element){
     //console.log(element.innerHTML)
     const id = parseInt(element.id) ; 
     //console.log(typeof id);//teste para saber o tipo de retorno que era string vou transformar
-    //obter resposta ao clicar vai comparar o pelo da opção clicada
+    //obter resposta ao clicar vai comparar o pelo da opção clicadaset the green color to the correct
     if(id === currentQuestion.answer){
         //console.log("alternativa correta");
         //pintar de verde se estiver correto...Ver meu CSS para entender...os @keyframes 
@@ -96,10 +96,25 @@ function getResult(element){
         //pintar de vermelho caso o clique seja feito em uma alternativa errada.
         //console.log("alternativa errada")
         element.classList.add("wrong");
+        //se a resposta estiver incorreta, mostre a opção correta adicionando a cor verde à opção correta
+        const optionLen = optionContainer.children.length;
+        for(let i=0;i<optionLen; i++){
+            if(parseInt(optionContainer.children[i].id) === currentQuestion.answer){
+                optionContainer.children[i].classList.add("correct");
+            }
+        }
     }
+    unclickableOptions();
 }
 
-
+//Tornar todas as outras opções não clicavel quando o usuário escolher uma opção
+//para restringir o usuário de trocar de opção
+function unclickableOptions(){
+    const optionLen = optionContainer.children.length;
+    for(let i=0; i<optionLen;i++){
+        optionContainer.children[i].classList.add("already-answerd");
+    }
+}
 
 function next(){
     if(questionCounter === quiz.length){

@@ -86,12 +86,11 @@ body{
     background-color: #ccc;
     padding: 15px;
     font-size: 16px;
-    line-height: 22px;
-    color: #000000;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    cursor: pointer;
-    text-transform: capitalize;
+    line-height: 28px;
+    
+    
+    margin: 0;
+    
 }
 .quiz-box .option-container .option{
     background-color: #ccc;
@@ -108,6 +107,9 @@ body{
     position: relative; 
     overflow: hidden;
 
+} 
+.quiz-box .option-container .option.already-answerd{
+    pointer-events: none;
 }
 @keyframes fadeIn{
     0%{
