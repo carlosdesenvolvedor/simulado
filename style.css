@@ -160,7 +160,7 @@ body{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.705);
     z-index: -1;
     animation: slideInLeft .5s ease forwards;
 }
@@ -189,7 +189,7 @@ body{
 
 }
 .quiz-box .answers-indicator div.correct{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.74);
      background-image: url("/img/correct.png");
      background-size: 50%;
      background-repeat: no-repeat;
@@ -197,7 +197,7 @@ body{
      
 }
 .quiz-box .answers-indicator div.wrong{
-    background-color: rgba(255, 0, 0, 0.719);
+    background-color: rgba(255, 0, 0, 0.507);
     background-image: url("/img/wrong.png");
     background-size: 50%;
      background-repeat: no-repeat;
@@ -214,7 +214,7 @@ body{
     font-size: 36px;
     line-height: 42px;
     color: #009688;
-    text-shadow: 2px 2px blue;
+    text-shadow: 2px 2px rgba(0, 0, 255, 0.658);
     font-family: Arial, Helvetica, sans-serif;
 }
 .result-box table{
@@ -236,15 +236,22 @@ body{
 
 }
 .hero-footer{
-    height: 80px;
+    height: 100px;
+    font-weight: 100;
     background-color: #0f0096;
     border-radius: 3px;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    animation: fadeInRight 1s ease;
+
 }
 .hero-footer h1{
     font-size: 15px;
     text-align: center;
     color: rgba(255, 255, 255, 0.658);
-    padding-top: 18px;
+    
     
 }
 .hero-footer a{
