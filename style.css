@@ -89,7 +89,7 @@ body{
     line-height: 25px;
 }
 .quiz-box .question-text{
-    font-size: 13px;
+    font-size: 15px;
     counter-reset: #000000;
     line-height: 28px;
     font-weight: 400;
