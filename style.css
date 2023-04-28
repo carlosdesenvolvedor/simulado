@@ -1,7 +1,7 @@
 body{
     margin:0;
     font-size: 16px;
-    background-color: #0f0096ce;
+    background-image: url(./img/bg-2.jpg);
 }
 *{
     box-sizing: border-box;
