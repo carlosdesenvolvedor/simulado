@@ -1,0 +1,21 @@
+Tudo aquilo que utilizamos para realizar alguma interação com o computador pode ser considerado hardware de entrada/saída. Podemos citar o mouse, teclado e monitor como exemplos. Em alguns casos a interação consiste em forma diferenciada, como no caso do disco rígido ou o relógio do sistema, já que não estamos tocando fisicamente estas peças, mas estamos enviando dados e extraindo informações delas em todo o momento.
+ 
+VOLTZ, Wagner Mendes. Sistemas Operacionais. Reimpressão - Maringá - PR. Unicesumar, 2019.
+ 
+Considerando o fragmento de texto acima, selecione a alternativa correta que apresente as duas categorias para dispositivos de entrada/saída:
+Alternativas
+Alternativa 1:
+ As duas categorias são: de memória e de processamento
+
+Alternativa 2:
+Categoria de barramento e de bloco
+
+Alternativa 3:
+As duas categorias são: de bloco e de caractere
+
+Alternativa 4:
+Via USB e via barramento
+
+Alternativa 5:
+Categoria de caractere ou de USB
+
