@@ -1,38 +1,119 @@
 // uma matriz de objetos:
 const quiz = [
 {
-    q:'1 Considerando o texto acima e que os processos possuem tipos de estados que podem se encontrar, selecione a alternativa que apresente todos os tipos de estados válidos:',
-    options:['a 1alkdf  fasdlkf lasdkfj ',
-             'b 1asçdlfa sdflkasj dflkasdj f,',
-             'c 1askdlf aslkdfj aslkdfj aslkdf',
-            'd 14alskdf asldkfj asldkfja sldkfj a',
-            'e 15laskdfj aslkdfj alskdfj alksdfj as',
+    q:'Um processo pode ser iniciado e terminado. O sistema operacional sabe se o processo está em execução ou não, por meio da técnica de troca de estados. Considerando o texto acima e que os processos possuem tipos de estados que podem se encontrar, selecione a alternativa que apresente todos os tipos de estados válidos:',
+    options:['Novo, em heap, em processamento, pronto ',
+             'Em heap, em processamento, pronto, aguardando,',
+             'Em memória, em processamento, pronto, em heap',
+            'Novo, em espera, pronto, em execução',
+            'Novo, pronto, inicial, em memória',
+            ],
+    answer: 3
+
+},
+{
+    q:'Um processo pode ser considerado um programa em execução. Por exemplo: imagine que desejamos ler um livro em nosso computador (os chamados e-books). O livro somente poderá ser lido quando ele estiver em execução e para isto é necessário clicar duas vezes sob ele para a sua abertura. Com isto, um processador de texto será aberto. A partir deste momento temos um processo em execução (no caso o processador de texto com o e-book sendo exibido).'
+ 
+    +'VOLTZ, Wagner Mendes. Sistemas Operacionais. Reimpressão - Maringá - PR. Unicesumar, 2019 (adaptado).'
+    
+    +'Considerando o texto acima e no que diz respeito aos processos de um sistema operacional é correto afirmar que:0',
+    options:['Para a execução de um processo se faz necessário recursos como: tempo de CPU, dispositivos de entrada e saída, alocação de memória e arquivos',
+             'Os processos são estruturas físicas que os operadores devem reproduzir com os computadores,',
+             ' São estruturas abstratas que são executados apenas em ambientes na nuvem',
+            'São estruturas que utilizam o uso do processador e da memória de um computador',
+            ' São estruturas físicas em que se pode expandir a capacidade do hardware para a',
             ],
     answer: 0
 
 },
 {
-    q:'2 Considerando o texto acima e que os processos possuem tipos de estados que podem se encontrar, selecione a alternativa que apresente todos os tipos de estados válidos:',
-    options:['a 2alkdf  fasdlkf lasdkfj ',
-             'b 2asçdlfa sdflkasj dflkasdj f,',
-             'c 2askdlf aslkdfj aslkdfj aslkdf',
-            'd 2alskdf asldkfj asldkfja sldkfj a',
-            'e 2laskdfj aslkdfj alskdfj alksdfj as',
+    q:'Sobre o Sistema Operacional Android é correto afirmar:',
+    options:['É um sistema operacional servidor que é baseado em Linux e foi desenvolvido pelo Google ',
+             'É um sistema operacional embarcado que é focado em dispositivos de Internet das Coisas e sua interface gráfica é baseada no Linux',
+             'É um sistema operacional para dispositivos móveis que teve seu desenvolvimento a partir do kernel do Linux',
+            'É um sistema operacional embarcado que é focado em dispositivos móveis e sua interface gráfica é baseada no Linux',
+            'É um sistema operacional para dispositivos móveis que teve seu desenvolvimento a partir do kernel do Windows',
+            ],
+    answer: 2
+
+},
+{
+    q:'Você já deve ter percebido que os processos de alguma maneira têm que se comunicar com outros. Cabe ao sistema operacional garantir esta comunicação de forma bem estruturada e sem interrupções.'
+    + 'Considerando o texto acima e pensando sobre a solução de Peterson é correto afirmar',
+    options:[' É uma solução para facilitar o processo de instalação de múltiplos sistemas operacionais em um computador',
+             'É responsável pela melhor utilização da memória em sistemas operacionais de 64 bits',
+             'Está diretamente ligado com a virtualização de ambientes e na criação de máquinas virtuais',
+            'Consiste em um algoritmo, inicialmente para dois processos, que controla a lista de processos interessados em acessar a região crítica',
+            'Nenhuma das anteriores',
+            ],
+    answer: 3
+
+},
+{
+    q:'A partir da ideia de memória virtual, observe as afirmativas a seguir:'
+    +'I – O controle do uso de memória para a troca de processos armazenados temporariamente realiza trocas de processos na memória (swapping).'
+    +'II – Um dos algoritmos para controle do swapping retira conteúdos de páginas de memória principal menos utilizados e os coloca em memória virtual para que um novo conteúdo seja colocado.'
+    +'III – Conteúdos de páginas de memória em uso são prioridade para serem alocados em memória virtual nos algoritmos de controle de swapping.',
+    options:['I, apenas. ',
+             'II, apenas.',
+             'III, apenas.',
+            'I e II, apenas.',
+            'II e III, apenas.',
+            ],
+    answer: 3
+
+},
+{
+    q:'Podemos descrever a função do sistema operacional como: gerenciar o uso dos componentes (hardware) de um computador, garantindo disponibilidade do hardware e armazenamento correto de dados; fornecer uma camada de abstração para utilização e desenvolvimento de outros softwares; e fornecer uma interface de acesso para dispositivos com tecnologias distintas como USB e IDE.'
+    +'Considerando o texto descrito a cima e sabendo que existem vários tipos de Sistemas Operacionais, selecione a alternativa que apresente tipos reais:',
+    options:['SO de servidores, SO de Backend, SO embarcado; ',
+             'SO de servidores, SO de Computadores Pessoais, SO embarcado',
+             'SO de potência, SO de Computadores Impessoais, SO embarcado',
+            'SO de Aplicação, SO de Threads, SO embarcado',
+            'SO de servidores, SO de Computadores Pessoais, SO de Threads',
             ],
     answer: 1
 
 },
 {
-    q:'3 Considerando o texto acima e que os processos possuem tipos de estados que podem se encontrar, selecione a alternativa que apresente todos os tipos de estados válidos:',
-    options:['a 3alkdf  fasdlkf lasdkfj ',
-             'b 3asçdlfa sdflkasj dflkasdj f,',
-             'c 3askdlf aslkdfj aslkdfj aslkdf',
-            'd a3lskdf asldkfj asldkfja sldkfj a',
-            'e 3laskdfj aslkdfj alskdfj alksdfj as',
+    q:'',
+    options:['Todo processo precisa de um espaço em memória durante a sua execução e um pedaço desta memória é compartilhado entre outros processos. Este compartilhamento é chamado de região crítica. A melhor maneira para que não ocorra condição de corrida é realizando a exclusão mútua. '
+    +'Com base no texto acima e no que diz respeito a comunicação entre processos e sobre a exclusão mútua, selecione a alternativa que represente um critério que se deve considerar numa proposta de solução:',
+             'Todo processo deve esperar eternamente para entrar em sua região crítica',
+             'Dois processos nunca podem estar simultaneamente em suas regiões críticas',
+            'Tudo pode ser afirmado sobre a velocidade ou sobre o número de CPUs',
+            'Todo processo executando fora de sua região crítica pode bloquear outros processos.',
+            'Nenhuma das anteriores',
+            ],
+    answer: 1
+
+},
+{
+    q:'',
+    options:[' ',
+             '',
+             '',
+            '',
+            '',
+            ],
+    answer: 2
+
+},
+{
+    q:'',
+    options:[' ',
+             '',
+             '',
+            '',
+            '',
             ],
     answer: 2
 
 }
+
+
+
+
 
 
 ]
