@@ -76,10 +76,9 @@ const quiz = [
 
 },
 {
-    q:'',
-    options:['Todo processo precisa de um espaço em memória durante a sua execução e um pedaço desta memória é compartilhado entre outros processos. Este compartilhamento é chamado de região crítica. A melhor maneira para que não ocorra condição de corrida é realizando a exclusão mútua. '
+    q:'Todo processo precisa de um espaço em memória durante a sua execução e um pedaço desta memória é compartilhado entre outros processos. Este compartilhamento é chamado de região crítica. A melhor maneira para que não ocorra condição de corrida é realizando a exclusão mútua. '
     +'Com base no texto acima e no que diz respeito a comunicação entre processos e sobre a exclusão mútua, selecione a alternativa que represente um critério que se deve considerar numa proposta de solução:',
-             'Todo processo deve esperar eternamente para entrar em sua região crítica',
+    options:[ 'Todo processo deve esperar eternamente para entrar em sua região crítica',
              'Dois processos nunca podem estar simultaneamente em suas regiões críticas',
             'Tudo pode ser afirmado sobre a velocidade ou sobre o número de CPUs',
             'Todo processo executando fora de sua região crítica pode bloquear outros processos.',
@@ -89,16 +88,44 @@ const quiz = [
 
 },
 {
-    q:'',
-    options:[' ',
-             '',
-             '',
-            '',
-            '',
+    q:'Um processo pode ser considerado um programa em execução. Por exemplo: imagine que desejamos ler um livro em nosso computador (os chamados e-books). O livro somente poderá ser lido quando ele estiver em execução e para isto é necessário clicar duas vezes sob ele para a sua abertura. Com isto, um processador de texto será aberto. A partir deste momento temos um processo em execução (no caso o processador de texto com o e-book sendo exibido).'
+    +'Sobre os processos de um Sistema Operacional, selecione a alternativa que apresente as quatro grandes áreas que o compõe?',
+    options:['Seção de dados, seção de informações, heap e pilha ',
+             'Seção de texto, seção de dados, heap e fila',
+             'Seção de texto, seção de dados, máquina virtual e pilha',
+            'Seção de memória, seção de dados, fila e pilha',
+            'Seção de texto, seção de dados, heap e pilha',
+            ],
+    answer: 0
+
+},
+{
+    q:'Os recursos de hardware representam uma série de tecnologia que trabalha em conjunto para que soluções de software possam ser executadas. Um dos recursos de hardware mais conhecidos é a memória de armazenamento. As afirmativas a seguir se referem a características de alguns tipos de memórias.'
+    +'I – Memória ROM ou de massa é usada para armazenamento de quantidades maiores de dados de forma permanente.'
+    +'II – Memória RAM se refere à memória temporária básica de trabalho onde os softwares abertos são inicialmente alocados.'
+    +'III – Memória cache se refere a um tipo de memória de pequena capacidade para dados de uso mais imediato pelo processador.',
+    options:['I, apenas. ',
+             'II, apenas.',
+             'III, apenas.',
+            'I e II, apenas.',
+            'II e III, apenas.',
+            ],
+    answer: 4
+
+},
+{
+    q:'O sistema operacional possuiu um conjunto grande de algoritmos de escalonamento que podem ser utilizados. Eles são divididos em: algoritmos de escalonamento preemptivo: o processo é executado por um tempo máximo fixado; e algoritmos de escalonamento não preemptivo: o processo é executado até que seja bloqueado. Com base no texto acima e que o escalonamento consiste em utilizar algoritmos para decidir qual processo deve ser utilizado. Um dos algoritmos mais simples de escalonamento é o chamado FCFS. Selecione a alternativa que apresenta uma definição correta sobre esse algoritmo:',
+    options:['São conhecidos como Pilhas e a ideia é que o último processo a entrar é o primeiro a sair ',
+             'O algoritmo FCFS consegue gerenciar os processos de modo que os menores sempre sejam executados primeiro',
+             'O algoritmo FCFS (first come, first served) implementa o conceito de Fila, onde o primeiro a entrar é o primeiro a sair',
+            'São conhecidos como Hash e a ideia é que o último processo a entrar é o primeiro a sair',
+            'O algoritmo FPS consegue gerenciar os processos de modo que os menores sempre sejam executados primeiro',
             ],
     answer: 2
 
-},
+}
+
+/*
 {
     q:'',
     options:[' ',
@@ -110,7 +137,7 @@ const quiz = [
     answer: 2
 
 }
-
+*/
 
 
 
